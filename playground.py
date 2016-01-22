@@ -1,16 +1,16 @@
-from flask import Flask
+from flask import Flask, g
 
 app = Flask(__name__)
-
-itemsCount = 10
 
 @app.route("/")
 def index():
 	return "index"
 
+
 @app.route("/status")
 def status():
 	return "status"
+
 
 def consume():
 	return "consume"
